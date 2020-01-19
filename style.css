@@ -1,0 +1,780 @@
+/*
+Template Name: Nahid - HTML5 Portfolio Template
+Version: 1.0.0
+Author: Nahid Hasan
+Description: Nahid is a Responsive CV / Resume / V-Card / Personal Website / Portfolio Template made with latest technologies HTML5, CSS3, Bootstrap4, Font-Awesome-5, jQuery and Ajax. Introduce yourself like a professional with this unique beautiful design. Provide every important information with awesome design components to your clients or employers. 
+            It is highly customizable because of it's code quality & of course clean, modern and creative. It is smartly responsive that makes it look flexible & crisp on any mobile or tab device.
+*/
+/* ====================================================================
+[TABLE OF CONTENTS]
+-------------------
+01. Global CSS
+02. Navigation CSS
+03. Hero CSS
+04. About CSS
+05. CTA CSS
+06. Skill CSS
+07. Services CSS
+08. Portfolio CSS
+09. Logo Carousel CSS
+10. Contact CSS
+11. Footer CSS
+*/
+/**
+* ===================================
+* = 01. Global CSS
+* ===================================
+*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #777;
+    font-size: 14px;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+input:focus, textarea:focus, button:focus, a:focus {
+    outline: none;
+}
+
+button[type=submit], input[type=submit] {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #30336b;
+}
+
+h1, h2, h3, h4 {
+	margin: 0 0 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+input, textarea {
+    padding: 10px 15px;
+    margin-bottom: 1em;
+}
+
+#testimonial, .cta-wrap, #services, #contact {
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#testimonial .section-title h2, #services .section-title h2, #contact .section-title h2 {
+    color: #fff;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.content-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.content-table .content-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+}
+
+.my-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.my-btn.primary-btn {
+    background-color: #6ab04c;
+    border-color: #6ab04c;
+}
+
+.my-btn.primary-btn:hover {
+    background-color: #30336b;
+    border-color: #30336b;
+    color: #fff;
+}
+
+.my-btn.trans-btn {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.my-btn.trans-btn:hover {
+    background-color: #6ab04c;
+    border-color: #6ab04c;
+    color: #fff;
+}
+
+.group-btn .my-btn {
+    margin-right: 20px;
+}
+
+.group-btn .my-btn:last-child {
+    margin-right: 0;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: #30336b;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-title h2:after, .about-content h2:after {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    height: 4px;
+    width: 50px;
+    background-color: #6ab04c;
+    content: '';
+    margin-left: -25px;
+}
+
+.section-title h2 span {
+    color: #6ab04c;
+}
+
+
+
+
+
+/**
+* ===================================
+* = 02. Navigation CSS
+* ===================================
+*/
+
+.navigation-wrap {
+    position:  absolute;
+    top:  0;
+    left:  0;
+    width:  100%;
+    background-color:  transparent;
+    z-index: 9;
+    padding-top: 30px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.navigation-wrap.fixed {
+    position:  fixed;
+    top:  0;
+    left:  0;
+    width:  100%;
+    z-index:  9;
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px 0;
+}
+
+#mobileMenu { display: none; }
+
+ul.main-menu li {
+    display:  inline-block;
+}
+
+ul.main-menu li a {
+    display:  block;
+    color:  #fff;
+    font-size:  16px;
+    text-transform:  capitalize;
+    padding: 15px 12px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+ul.main-menu li a:hover, ul.main-menu li a.active {
+    color:  #6ab04c;
+}
+
+.logo {
+    margin:  0;
+    padding: 6px 0;
+    color: #fff;
+}
+
+.hero-wrap {
+    height:  100vh;
+    position:  relative;
+}
+
+.hero-wrap > div {
+    height:  100%;
+}
+
+#bg-slide {
+    position:  absolute;
+    top:  0;
+    left:  0;
+    width:  100%;
+    height:  100%;
+    z-index:  1;
+}
+
+.hero-inner {
+    height: 100%;
+    padding-top: 30px;
+}
+
+
+
+
+
+/**
+* ===================================
+* = 03. Hero CSS
+* ===================================
+*/
+.slide-bg-1 { background-image: url(assets/img/slide-1.jpg); }
+
+#bg-slide .owl-item > div {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+#bg-slide div {
+    height: 100%;
+}
+
+#bg-slide .owl-controls {
+    height: auto;
+}
+
+.hero-wrap .overlay {
+    z-index: 2;
+}
+
+.hero-inner {
+    z-index: 5;
+    position:  absolute;
+    left:  0;
+    top:  0;
+    width:  100%;
+}
+
+.hero-inner h1, .hero-inner h3 {
+    color:  #fff;
+}
+
+.hero-inner h1 {
+    text-transform:  uppercase;
+    margin-bottom: 0;
+}
+
+.hero-inner h3 {
+    margin: 20px 0 30px;
+}
+
+.hero-inner h1 span {
+    color: #6ab04c;
+}
+
+
+
+
+
+
+
+/**
+* ===================================
+* = 04. About CSS
+* ===================================
+*/
+.about-content h2 {
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.about-content h2:after {
+    left: 0;
+    margin: 0;
+}
+
+.about-content .my-btn {
+    margin: 15px 0 25px;
+}
+
+ul.social-menu li {
+    display: inline-block;
+}
+
+ul.social-menu li a {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color: #6ab04c;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 2.4;
+    margin: 4px 2px;
+}
+
+
+
+
+
+
+/**
+* ===================================
+* = 05. CTA CSS
+* ===================================
+*/
+.cta-wrap { background-image: url(assets/img/cta-bg.jpg); }
+
+.cta-wrap p {
+    color: #fff;
+    margin: 16px 0;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+/**
+* ===================================
+* = 06. Skill CSS
+* ===================================
+*/
+.single-progress {
+    margin-bottom: 30px;
+}
+
+.single-progress h6 {
+    font-size:  14px;
+}
+
+.single-progress h6 span {margin-left:  8px;position:  relative;font-size: 90%;}
+
+.single-progress h6 span:before {
+    content: '(';
+}
+
+.single-progress h6 span:after {
+    content: ')';
+}
+
+.single-progress .progress-bar {
+    background-color:  #6ab04c;
+}
+
+
+
+
+
+
+
+/**
+* ===================================
+* = 07. Services CSS
+* ===================================
+*/
+
+#services { background-image: url(assets/img/service-bg.jpg); }
+
+.single-service {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.single-service h4 {
+    text-transform:  uppercase;
+    font-size:  18px;
+    margin: 15px 0;
+}
+
+.single-service .service-icon {
+    font-size:  35px;
+    color: #6ab04c;
+}
+
+
+
+
+
+
+
+
+
+
+
+/**
+* ===================================
+* = 08. Portfolio CSS
+* ===================================
+*/
+
+ul.portfolio-filter li {
+    display:  inline-block;
+    padding:  15px 25px;
+    text-align:  center;
+    text-transform:  capitalize;
+    border: 1px solid #30336b;
+    color: #30336b;
+    margin: 0 4px;
+    border-radius:  2px;
+    cursor: pointer;
+}
+
+ul.portfolio-filter {
+    margin-bottom: 45px;
+}
+
+ul.portfolio-filter li.active {
+    background-color: #6ab04c;
+    color:  #fff;
+    border-color:  #6ab04c;
+}
+
+.portfolio-items > a {
+    display:  block;
+    width: 32.10%;
+    float:  left;
+    margin:  5px;
+    position:  relative;
+    cursor:  zoom-in;
+    z-index: 2;
+}
+
+.portfolio-items > a .hover-item {
+    position:  absolute;
+    top: 50%;
+    left:  0;
+    width:  100%;
+    height: 50px;
+    text-align:  center;
+    font-size:  18px;
+    color:  #fff;
+    line-height:  2.5;
+    text-transform:  capitalize;
+    margin-top: -25px;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.portfolio-items > a:before {    
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #000;
+    opacity: 0;
+    content: '';
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.portfolio-items > a:hover .hover-item {    
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.portfolio-items > a:hover:before {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+/**
+* ===================================
+* = 09. Testimonial CSS
+* ===================================
+*/
+#testimonial { background-image: url(assets/img/testimonial-bg.jpg); }
+
+.single-testimonial .client-img {
+    width:  100px!important;
+    height:  100px;
+    border-radius:  50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.single-testimonial h4 {
+    text-transform:  uppercase;
+    font-size: 18px;
+    margin:  10px 0;
+    color: #fff;
+}
+
+.single-testimonial p {
+    color: #d4d4d4;
+}
+
+.single-testimonial h4 span {
+    display:  block;
+    font-size: 60%;
+    font-weight:  300;
+    text-transform:  capitalize;
+    color: #d4d4d4;
+}
+
+.owl-controls .owl-nav div {
+    position:  absolute;
+    left: 46%;
+    top:  100%;
+    width: 40px;
+    height: 40px;
+    margin-left:  -25px;
+    background-color:  #6ab04c;
+    color:  #fff;
+    text-align:  center;
+    font-size: 20px;
+    line-height: 1.9;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 1px;
+}
+
+.owl-controls .owl-nav div:hover {
+    background-color:  #30336b;
+}
+
+.owl-controls .owl-nav div.owl-next {
+    left:  auto;
+    right: 46%;
+}
+
+
+
+
+
+
+
+
+
+/**
+* ===================================
+* = 09. Logo Carousel CSS
+* ===================================
+*/
+#logo-carousel a {
+    display:  block;
+}
+
+
+
+
+
+
+
+
+
+
+/**
+* ===================================
+* = 10. Contact CSS
+* ===================================
+*/
+#contact { background-image: url(assets/img/contact-bg.jpg); }
+
+.contact {
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.contact .btn-primary {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.contact .btn-primary:hover {
+    background: transparent;
+}
+
+.contact .section-title h3{
+    color: #fff;
+}
+
+.contact .section-heading {
+    color: #fff;
+}
+
+.contact .form-group {
+    margin-bottom: 25px;
+}
+
+.contact .form-group input,
+.contact .form-group textarea {
+    padding: 20px;
+}
+
+.contact .form-group input.form-control {
+    height: auto;
+}
+
+.contact .form-group textarea.form-control {
+    height: 236px;
+}
+
+.contact::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+.contact:-moz-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+.contact::-moz-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+.contact:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+.contact .text-danger {
+    color: #e74c3c;
+}
+
+.contact button {
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+
+.footer-contact-info {
+    color: #fff;
+    padding: 20px 30px;
+    margin-top: 80px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #6ab04c;
+}
+
+.footer-contact-info ul {
+    padding-bottom: 10px;
+}
+
+.footer-contact-info h4 {
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.footer-contact-info li strong {
+    font-weight: 600;
+}
+
+
+/**
+* ===================================
+* = 11. Footer CSS
+* ===================================
+*/
+.footer-wrap {
+    margin-top: 100px;
+    padding: 25px 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.footer-wrap .copyright {
+    text-transform: uppercase;
+    text-transform: none;
+    color: #999;
+}
+
+.footer-wrap .footer-link li {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+.footer-wrap .footer-link li a {
+    color: #fff;
+    display: block;
+}
+
+.footer-wrap .footer-link li a:hover {
+    color: #6ab04c;
+}
